@@ -39,6 +39,8 @@
     [super viewWillLayoutSubviews];
     
     self.helloWorldLabel.frame = CGRectMake(0, 0, 100, 44);
+    
+    self.helloWorldLabel.center = self.view.center;
 }
 
 @end
