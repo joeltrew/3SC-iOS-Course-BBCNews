@@ -19,6 +19,9 @@
     self = [super init];
     if (self) {
         
+        self.helloWorldLabel = [[UILabel alloc] init];
+        self.helloWorldLabel.text = @"Hello World";
+        self.helloWorldLabel.backgroundColor = [UIColor purpleColor];
         
     }
     return self;
@@ -26,19 +29,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self.view addSubview:self.helloWorldLabel];
     // Do any additional setup after loading the view.
 }
 
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)viewWillLayoutSubviews
+{
+    [super viewWillLayoutSubviews];
+    
+    self.helloWorldLabel.frame = CGRectMake(0, 0, 100, 44);
 }
-*/
 
 @end

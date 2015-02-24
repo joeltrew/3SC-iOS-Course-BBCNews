@@ -10,4 +10,6 @@
 
 @interface JLTDemoViewController : UIViewController
 
+@property (nonatomic, strong) UILabel *helloWorldLabel;
+
 @end
