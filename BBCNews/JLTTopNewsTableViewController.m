@@ -7,6 +7,8 @@
 //
 
 #import "JLTTopNewsTableViewController.h"
+#import "JLTNewsStoryTableViewCell.h"
+
 
 @interface JLTTopNewsTableViewController ()
 
@@ -20,7 +22,7 @@
 {
     self = [super initWithStyle:UITableViewStylePlain];
     if (self) {
-        [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"NewsStoryCellIdentifier"];
+        [self.tableView registerClass:[JLTNewsStoryTableViewCell class] forCellReuseIdentifier:@"NewsStoryCellIdentifier"];
     }
     return self;
 }
@@ -53,6 +55,10 @@
     
     // Configure the cell...
     
+    
+    
+    cell.textLabel.text = @"Hello World!";
+    cell.detailTextLabel.text = @"Hello again!";
     return cell;
 }
 
