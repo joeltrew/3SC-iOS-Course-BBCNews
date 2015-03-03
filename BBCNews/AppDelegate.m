@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "JLTDemoViewController.h"
+#import "JLTTopNewsTableViewController.h"
+
 
 @interface AppDelegate ()
 
@@ -17,14 +18,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-     JLTDemoViewController *myFirstView = [[JLTDemoViewController alloc]init];
+
     
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     
-    self.window.backgroundColor = [UIColor redColor];
-    
-    self.window.rootViewController = myFirstView;
     
     [self.window makeKeyAndVisible];
     
