@@ -55,10 +55,9 @@
     
     // Configure the cell...
     
-    
-    
     cell.textLabel.text = @"Hello World!";
     cell.detailTextLabel.text = @"Hello again!";
+    cell.imageView.image = [UIImage imageNamed:@"NewsStoryImage"];
     return cell;
 }
 
