@@ -56,7 +56,7 @@
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 80;
+    return 130;
 }
 
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
@@ -80,12 +80,15 @@
             cell.textLabel.text = @"Man dies after golf lake accident";
             cell.detailTextLabel.text = @"A 20-year-old man has died after a vehicle rolled into a lake at the Celtic Manor Resort golf course in Newport, police say.";
             cell.imageView.image = [UIImage imageNamed:@"NewsStoryImage"];
+            cell.textLabel.numberOfLines = 0;
+            cell.detailTextLabel.numberOfLines = 0;
             
         }
     } else if (indexPath.section == 1){
         if(indexPath.row == 0){
             cell.textLabel.text = @"News Story 2";
             cell.detailTextLabel.text = @"News Story 2 subtitle";
+            cell.detailTextLabel.numberOfLines = 0;
         }
         
         
