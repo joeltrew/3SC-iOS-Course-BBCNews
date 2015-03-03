@@ -64,6 +64,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FF6F73B81AA64D0B000C2DF1 /* Demo files */ = {
+			isa = PBXGroup;
+			children = (
+				FFB2A87A1A9CFF78009F283C /* JLTDemoViewController.h */,
+				FFB2A87B1A9CFF78009F283C /* JLTDemoViewController.m */,
+			);
+			name = "Demo files";
+			sourceTree = "<group>";
+		};
 		FFB2A8481A9CFC6A009F283C = {
 			isa = PBXGroup;
 			children = (
@@ -85,12 +94,11 @@
 		FFB2A8531A9CFC6A009F283C /* BBCNews */ = {
 			isa = PBXGroup;
 			children = (
-				FFB2A87A1A9CFF78009F283C /* JLTDemoViewController.h */,
+				FF6F73B81AA64D0B000C2DF1 /* Demo files */,
 				FF6F73B21AA634CA000C2DF1 /* JLTTopNewsTableViewController.h */,
 				FF6F73B31AA634CA000C2DF1 /* JLTTopNewsTableViewController.m */,
 				FF6F73B51AA63E66000C2DF1 /* JLTNewsStoryTableViewCell.h */,
 				FF6F73B61AA63E66000C2DF1 /* JLTNewsStoryTableViewCell.m */,
-				FFB2A87B1A9CFF78009F283C /* JLTDemoViewController.m */,
 				FFB2A8581A9CFC6A009F283C /* AppDelegate.h */,
 				FFB2A8591A9CFC6A009F283C /* AppDelegate.m */,
 				FFB2A8611A9CFC6A009F283C /* Images.xcassets */,
