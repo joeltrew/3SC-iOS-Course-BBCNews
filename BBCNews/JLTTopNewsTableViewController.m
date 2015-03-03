@@ -20,7 +20,7 @@
 
 - (instancetype)init
 {
-    self = [super initWithStyle:UITableViewStylePlain];
+    self = [super initWithStyle:UITableViewStyleGrouped];
     if (self) {
         [self.tableView registerClass:[JLTNewsStoryTableViewCell class] forCellReuseIdentifier:@"NewsStoryCellIdentifier"];
     }
@@ -41,13 +41,24 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return 1;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    if (section == 0) {
+        return 1;
+    }else{
+        return 2;
+    }
     // Return the number of rows in the section.
-    return 3;
+    return 0;
 }
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 80;
+}
+
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -55,11 +66,37 @@
     
     // Configure the cell...
     
-    cell.textLabel.text = @"Hello World!";
-    cell.detailTextLabel.text = @"Hello again!";
-    cell.imageView.image = [UIImage imageNamed:@"NewsStoryImage"];
+    if (indexPath.section == 0) {
+        
+        if (indexPath.row == 0) {
+            cell.textLabel.text = @"Man dies after golf lake accident";
+            cell.detailTextLabel.text = @"A 20-year-old man has died after a vehicle rolled into a lake at the Celtic Manor Resort golf course in Newport, police say.";
+            cell.imageView.image = [UIImage imageNamed:@"NewsStoryImage"];
+            
+        }
+    } else if (indexPath.section == 1){
+        if(indexPath.row == 0){
+            cell.textLabel.text = @"News Story 2";
+            cell.detailTextLabel.text = @"News Story 2 subtitle";
+        }
+        
+        
+        else if(indexPath.row == 1){
+            cell.textLabel.text = @"News Story 3";
+            cell.detailTextLabel.text = @"News Story 3 subtitle";
+        }
+    }
+    
+    else {
+        cell.textLabel.text = nil;
+        cell.detailTextLabel.text =  nil;
+        cell.imageView.image = nil;
+    }
+    //    cell.textLabel.text = @"Hello World!";
+    //    cell.detailTextLabel.text = @"Hello again!";
+    //    cell.imageView.image = [UIImage imageNamed:@"NewsStoryImage"];
     return cell;
+    
 }
-
 
 @end
