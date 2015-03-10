@@ -8,6 +8,8 @@
 
 #import "JLTNewsDetailTableViewController.h"
 #import "JLTNewsStory.h"
+#import "JLTNewsStoryImageCell.h"
+
 
 @interface JLTNewsDetailTableViewController ()
 
@@ -23,6 +25,8 @@
     if (self) {
         self.story = story;
         NSLog(@"Story:%@", self.story.storyHeadline);
+        [self.tableView registerClass:[JLTNewsStoryImageCell class] forCellReuseIdentifier:@"ImageCellID"];
+        
         [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"CellID"];
     }
     return self;
@@ -57,15 +61,25 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellID" forIndexPath:indexPath];
+
+    
     
     // Configure the cell...
     if (indexPath.row == 0) {
-        cell.imageView.image = self.story.storyImage;
+        JLTNewsStoryImageCell *imageCell = [tableView dequeueReusableCellWithIdentifier:@"ImageCellID" forIndexPath:indexPath];
+        
+        imageCell.imageView.image = self.story.storyImage;
+        
+        
+        return imageCell;
     }
+    
+       UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellID" forIndexPath:indexPath];
     
     return cell;
 }
+
+
 
 
 /*
