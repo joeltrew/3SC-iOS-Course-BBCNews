@@ -17,6 +17,7 @@
 		FFB2A87C1A9CFF78009F283C /* JLTDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB2A87B1A9CFF78009F283C /* JLTDemoViewController.m */; };
 		FFE31DA11AAF6E89008998AA /* JLTNewsDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFE31DA01AAF6E89008998AA /* JLTNewsDetailTableViewController.m */; };
 		FFE31DA41AAF722B008998AA /* JLTNewsStory.m in Sources */ = {isa = PBXBuildFile; fileRef = FFE31DA31AAF722B008998AA /* JLTNewsStory.m */; };
+		FFE31DA71AAF7F0B008998AA /* JLTNewsStoryImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FFE31DA61AAF7F0B008998AA /* JLTNewsStoryImageCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,8 @@
 		FFE31DA01AAF6E89008998AA /* JLTNewsDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLTNewsDetailTableViewController.m; sourceTree = "<group>"; };
 		FFE31DA21AAF722B008998AA /* JLTNewsStory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLTNewsStory.h; sourceTree = "<group>"; };
 		FFE31DA31AAF722B008998AA /* JLTNewsStory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLTNewsStory.m; sourceTree = "<group>"; };
+		FFE31DA51AAF7F0B008998AA /* JLTNewsStoryImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLTNewsStoryImageCell.h; sourceTree = "<group>"; };
+		FFE31DA61AAF7F0B008998AA /* JLTNewsStoryImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLTNewsStoryImageCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +110,8 @@
 				FFE31DA31AAF722B008998AA /* JLTNewsStory.m */,
 				FFE31D9F1AAF6E89008998AA /* JLTNewsDetailTableViewController.h */,
 				FFE31DA01AAF6E89008998AA /* JLTNewsDetailTableViewController.m */,
+				FFE31DA51AAF7F0B008998AA /* JLTNewsStoryImageCell.h */,
+				FFE31DA61AAF7F0B008998AA /* JLTNewsStoryImageCell.m */,
 				FF6F73B51AA63E66000C2DF1 /* JLTNewsStoryTableViewCell.h */,
 				FF6F73B61AA63E66000C2DF1 /* JLTNewsStoryTableViewCell.m */,
 				FFB2A8581A9CFC6A009F283C /* AppDelegate.h */,
@@ -249,6 +254,7 @@
 				FFE31DA11AAF6E89008998AA /* JLTNewsDetailTableViewController.m in Sources */,
 				FF6F73B71AA63E66000C2DF1 /* JLTNewsStoryTableViewCell.m in Sources */,
 				FFB2A87C1A9CFF78009F283C /* JLTDemoViewController.m in Sources */,
+				FFE31DA71AAF7F0B008998AA /* JLTNewsStoryImageCell.m in Sources */,
 				FF6F73B41AA634CA000C2DF1 /* JLTTopNewsTableViewController.m in Sources */,
 				FFE31DA41AAF722B008998AA /* JLTNewsStory.m in Sources */,
 			);
