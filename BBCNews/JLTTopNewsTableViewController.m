@@ -22,6 +22,7 @@
 {
     self = [super initWithStyle:UITableViewStyleGrouped];
     if (self) {
+        self.title = @"Joel's News";
         [self.tableView registerClass:[JLTNewsStoryTableViewCell class] forCellReuseIdentifier:@"NewsStoryCellIdentifier"];
     }
     return self;

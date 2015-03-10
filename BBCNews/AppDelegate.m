@@ -24,17 +24,12 @@
 
     JLTTopNewsTableViewController *topNewsView = [[JLTTopNewsTableViewController alloc]init];
     
-    self.window.rootViewController = topNewsView;
+    UINavigationController *topNewsNavController = [[UINavigationController alloc]initWithRootViewController:topNewsView];
+    
+    self.window.rootViewController = topNewsNavController;
    
-    
-    
     
     [self.window makeKeyAndVisible];
-    
-    
-    
-   
-    
     
     
     return YES;
