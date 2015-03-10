@@ -70,7 +70,6 @@
         
         imageCell.imageView.image = self.story.storyImage;
         
-        
         return imageCell;
     }
     
@@ -79,7 +78,9 @@
     return cell;
 }
 
-
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 150;
+}
 
 
 /*

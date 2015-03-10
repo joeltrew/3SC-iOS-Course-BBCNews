@@ -14,6 +14,8 @@
 {
     [super layoutSubviews];
     self.imageView.frame = self.bounds;
+    self.imageView.contentMode = UIViewContentModeScaleAspectFill;
+    self.clipsToBounds = YES;
 }
 
 @end
