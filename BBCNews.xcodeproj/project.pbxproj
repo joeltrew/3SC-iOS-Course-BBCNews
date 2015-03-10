@@ -104,16 +104,9 @@
 			isa = PBXGroup;
 			children = (
 				FF6F73B81AA64D0B000C2DF1 /* Demo files */,
-				FF6F73B21AA634CA000C2DF1 /* JLTTopNewsTableViewController.h */,
-				FF6F73B31AA634CA000C2DF1 /* JLTTopNewsTableViewController.m */,
-				FFE31DA21AAF722B008998AA /* JLTNewsStory.h */,
-				FFE31DA31AAF722B008998AA /* JLTNewsStory.m */,
-				FFE31D9F1AAF6E89008998AA /* JLTNewsDetailTableViewController.h */,
-				FFE31DA01AAF6E89008998AA /* JLTNewsDetailTableViewController.m */,
-				FFE31DA51AAF7F0B008998AA /* JLTNewsStoryImageCell.h */,
-				FFE31DA61AAF7F0B008998AA /* JLTNewsStoryImageCell.m */,
-				FF6F73B51AA63E66000C2DF1 /* JLTNewsStoryTableViewCell.h */,
-				FF6F73B61AA63E66000C2DF1 /* JLTNewsStoryTableViewCell.m */,
+				FFE31DA81AAF8559008998AA /* View Controllers */,
+				FFE31DA91AAF858D008998AA /* Models */,
+				FFE31DAA1AAF85A2008998AA /* Views */,
 				FFB2A8581A9CFC6A009F283C /* AppDelegate.h */,
 				FFB2A8591A9CFC6A009F283C /* AppDelegate.m */,
 				FFB2A8611A9CFC6A009F283C /* Images.xcassets */,
@@ -147,6 +140,37 @@
 				FFB2A86F1A9CFC6A009F283C /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FFE31DA81AAF8559008998AA /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FF6F73B21AA634CA000C2DF1 /* JLTTopNewsTableViewController.h */,
+				FF6F73B31AA634CA000C2DF1 /* JLTTopNewsTableViewController.m */,
+				FFE31D9F1AAF6E89008998AA /* JLTNewsDetailTableViewController.h */,
+				FFE31DA01AAF6E89008998AA /* JLTNewsDetailTableViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		FFE31DA91AAF858D008998AA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FFE31DA21AAF722B008998AA /* JLTNewsStory.h */,
+				FFE31DA31AAF722B008998AA /* JLTNewsStory.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		FFE31DAA1AAF85A2008998AA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FFE31DA51AAF7F0B008998AA /* JLTNewsStoryImageCell.h */,
+				FFE31DA61AAF7F0B008998AA /* JLTNewsStoryImageCell.m */,
+				FF6F73B51AA63E66000C2DF1 /* JLTNewsStoryTableViewCell.h */,
+				FF6F73B61AA63E66000C2DF1 /* JLTNewsStoryTableViewCell.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
