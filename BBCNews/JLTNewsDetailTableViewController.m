@@ -7,12 +7,25 @@
 //
 
 #import "JLTNewsDetailTableViewController.h"
+#import "JLTNewsStory.h"
 
 @interface JLTNewsDetailTableViewController ()
+
+@property (nonatomic, strong) JLTNewsStory *story;
 
 @end
 
 @implementation JLTNewsDetailTableViewController
+
+- (instancetype)initWithStory:(JLTNewsStory *)story
+{
+    self = [super initWithStyle:UITableViewStylePlain];
+    if (self) {
+        self.story = story;
+        NSLog(@"Story:%@", self.story.storyHeadline);
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

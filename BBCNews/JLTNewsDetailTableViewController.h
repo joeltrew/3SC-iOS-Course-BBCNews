@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class JLTNewsStory;
 
 @interface JLTNewsDetailTableViewController : UITableViewController
+
+- (instancetype)initWithStory:(JLTNewsStory *)story;
 
 @end

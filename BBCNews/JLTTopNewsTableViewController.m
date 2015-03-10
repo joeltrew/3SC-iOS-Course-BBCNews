@@ -97,7 +97,8 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    JLTNewsDetailTableViewController *detailedView = [[JLTNewsDetailTableViewController alloc] init];
+    JLTNewsStory *story = self.stories[indexPath.row];
+    JLTNewsDetailTableViewController *detailedView = [[JLTNewsDetailTableViewController alloc] initWithStory:story];
     
     [self.navigationController pushViewController:detailedView animated:true];
 }
