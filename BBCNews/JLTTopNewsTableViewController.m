@@ -8,6 +8,7 @@
 
 #import "JLTTopNewsTableViewController.h"
 #import "JLTNewsStoryTableViewCell.h"
+#import "JLTNewsDetailTableViewController.h"
 
 
 @interface JLTTopNewsTableViewController ()
@@ -109,6 +110,12 @@
     //    cell.imageView.image = [UIImage imageNamed:@"NewsStoryImage"];
     return cell;
     
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    JLTNewsDetailTableViewController *detailedView = [[JLTNewsDetailTableViewController alloc] init];
+    
+    [self.navigationController pushViewController:detailedView animated:true];
 }
 
 @end

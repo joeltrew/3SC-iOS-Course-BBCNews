@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BBCNews/JLTTopNewsTableViewController.m"
-            timestampString = "447704518.843081"
+            timestampString = "447705350.679919"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BBCNews/JLTTopNewsTableViewController.m"
-            timestampString = "447704518.843081"
+            timestampString = "447705350.679919"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
             landmarkName = "@implementation JLTTopNewsTableViewController"
             landmarkType = "3">
          </BreakpointContent>
