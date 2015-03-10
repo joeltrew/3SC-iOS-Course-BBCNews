@@ -9,13 +9,19 @@
 #import "JLTTopNewsTableViewController.h"
 #import "JLTNewsStoryTableViewCell.h"
 #import "JLTNewsDetailTableViewController.h"
+#import "JLTNewsStory.h"
+
 
 
 @interface JLTTopNewsTableViewController ()
 
+@property (nonatomic, strong) NSArray *stories;
+
 @end
 
-@implementation JLTTopNewsTableViewController
+@implementation JLTTopNewsTableViewController;
+
+
 
 
 
@@ -25,6 +31,18 @@
     if (self) {
         self.title = @"Joel's News";
         [self.tableView registerClass:[JLTNewsStoryTableViewCell class] forCellReuseIdentifier:@"NewsStoryCellIdentifier"];
+        
+        JLTNewsStory *storyFirstStory = [[JLTNewsStory alloc] init];
+        storyFirstStory.storyHeadline = @"Apple Watch prices and apps revealed";
+        storyFirstStory.storyBody = @"Apple's smartwatch collection will range in price from $349 to $17,000 (£299 to £13,500 in the UK) depending on the metals they are made from and the straps they are bought with.";
+        storyFirstStory.storyImage = [UIImage imageNamed:@"NewsStoryImage"];
+        
+        JLTNewsStory *storySecondStory = [[JLTNewsStory alloc] init];
+        storySecondStory.storyHeadline = @"Banning Tor unwise and infeasible, MPs told";
+        storySecondStory.storyBody = @"A ban on online anonymity networks would be 'technologically infeasible' and unwise, MPs have been told.";
+        storySecondStory.storyImage = [UIImage imageNamed:@"NewsStoryImage"];
+        
+        self.stories = @[storyFirstStory, storySecondStory];
     }
     return self;
 }
@@ -43,18 +61,12 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return 2;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    if (section == 0) {
-        return 1;
-    }else{
-        return 2;
-    }
-    // Return the number of rows in the section.
-    return 0;
+    return self.stories.count;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -74,40 +86,12 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"NewsStoryCellIdentifier" forIndexPath:indexPath];
     
-    // Configure the cell...
+    JLTNewsStory *newsStory = self.stories[indexPath.row];
+    cell.textLabel.text = newsStory.storyHeadline;
+    cell.detailTextLabel.text = newsStory.storyBody;
+    cell.imageView.image = newsStory.storyImage;
     
-    if (indexPath.section == 0) {
-        
-        if (indexPath.row == 0) {
-            cell.textLabel.text = @"Man dies after golf lake accident";
-            cell.detailTextLabel.text = @"A 20-year-old man has died after a vehicle rolled into a lake at the Celtic Manor Resort golf course in Newport, police say.";
-            cell.imageView.image = [UIImage imageNamed:@"NewsStoryImage"];
-            cell.textLabel.numberOfLines = 0;
-            cell.detailTextLabel.numberOfLines = 0;
-            
-        }
-    } else if (indexPath.section == 1){
-        if(indexPath.row == 0){
-            cell.textLabel.text = @"News Story 2";
-            cell.detailTextLabel.text = @"News Story 2 subtitle";
-            cell.detailTextLabel.numberOfLines = 0;
-        }
-        
-        
-        else if(indexPath.row == 1){
-            cell.textLabel.text = @"News Story 3";
-            cell.detailTextLabel.text = @"News Story 3 subtitle";
-        }
-    }
     
-    else {
-        cell.textLabel.text = nil;
-        cell.detailTextLabel.text =  nil;
-        cell.imageView.image = nil;
-    }
-    //    cell.textLabel.text = @"Hello World!";
-    //    cell.detailTextLabel.text = @"Hello again!";
-    //    cell.imageView.image = [UIImage imageNamed:@"NewsStoryImage"];
     return cell;
     
 }
