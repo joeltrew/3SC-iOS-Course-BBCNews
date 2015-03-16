@@ -90,7 +90,13 @@
     cell.textLabel.text = newsStory.storyHeadline;
     cell.detailTextLabel.text = newsStory.storyBody;
     cell.imageView.image = newsStory.storyImage;
-
+    
+    
+    cell.textLabel.numberOfLines = 0;
+    cell.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    
+    cell.detailTextLabel.numberOfLines = 4;
+    cell.detailTextLabel.lineBreakMode = NSLineBreakByTruncatingTail;
     
     
     return cell;
