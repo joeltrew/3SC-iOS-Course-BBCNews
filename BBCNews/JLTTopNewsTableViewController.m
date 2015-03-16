@@ -40,7 +40,7 @@
         JLTNewsStory *storySecondStory = [[JLTNewsStory alloc] init];
         storySecondStory.storyHeadline = @"Banning Tor unwise and infeasible, MPs told";
         storySecondStory.storyBody = @"A ban on online anonymity networks would be 'technologically infeasible' and unwise, MPs have been told.";
-        storySecondStory.storyImage = [UIImage imageNamed:@"NewsStoryImage"];
+        storySecondStory.storyImage = [UIImage imageNamed:@"NewsStoryImage2"];
         
         self.stories = @[storyFirstStory, storySecondStory];
     }
@@ -90,6 +90,7 @@
     cell.textLabel.text = newsStory.storyHeadline;
     cell.detailTextLabel.text = newsStory.storyBody;
     cell.imageView.image = newsStory.storyImage;
+
     
     
     return cell;
