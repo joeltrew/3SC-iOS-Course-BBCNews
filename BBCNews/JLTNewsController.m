@@ -11,6 +11,13 @@
 
 static JLTNewsController *sharedController = nil;
 
+
+@interface JLTNewsController ()
+
+@property (nonatomic, strong) TSCRequestController *requestController;
+
+@end
+
 @implementation JLTNewsController
 
 + (JLTNewsController *)sharedController
@@ -22,6 +29,29 @@ static JLTNewsController *sharedController = nil;
     }
     
     return sharedController;
+}
+
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.requestController = [[TSCRequestController alloc]initWithBaseAddress:@"https://mattcheetham.co.uk/bbc"];
+    }
+    return self;
+}
+
+
+- (void)getLatestNewsStories
+{
+    [self.requestController get:@"topStories.php" completion:^(TSCRequestResponse *response, NSError *error) {
+        if (error) {
+            NSLog(@"Something went wrong!!");
+            return;
+        }
+        
+        NSLog(@"response:%@", response.array);
+    }];
 }
 
 @end
