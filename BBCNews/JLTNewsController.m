@@ -7,6 +7,7 @@
 //
 
 #import "JLTNewsController.h"
+@import ThunderRequest;
 
 static JLTNewsController *sharedController = nil;
 
