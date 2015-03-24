@@ -92,8 +92,8 @@
     cell.imageView.image = newsStory.storyImage;
     
     
-    cell.textLabel.numberOfLines = 0;
-    cell.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    cell.textLabel.numberOfLines = 3;
+    cell.textLabel.lineBreakMode = NSLineBreakByTruncatingTail;
     
     cell.detailTextLabel.numberOfLines = 4;
     cell.detailTextLabel.lineBreakMode = NSLineBreakByTruncatingTail;
