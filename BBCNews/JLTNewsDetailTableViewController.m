@@ -76,6 +76,8 @@
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellID" forIndexPath:indexPath];
         cell.textLabel.text = self.story.storyBody;
         
+        cell.textLabel.numberOfLines = 0;
+        
         return cell;
         
     }
@@ -85,8 +87,21 @@ UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellID" f
     return cell;
 }
 
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 150;
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row == 0) {
+        return 150;
+    } else if (indexPath.row == 1){
+        CGSize constrainedSize = CGSizeMake([UIScreen mainScreen].bounds.size.width -32, MAXFLOAT);
+        CGRect bodyRect = [self.story.storyBody boundingRectWithSize:constrainedSize
+                           
+                            options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
+                            attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:18] }
+                            context:nil];
+        
+        return bodyRect.size.height + 24;
+    }
+    return 45;
 }
 
 
