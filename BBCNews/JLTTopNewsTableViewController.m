@@ -10,6 +10,7 @@
 #import "JLTNewsStoryTableViewCell.h"
 #import "JLTNewsDetailTableViewController.h"
 #import "JLTNewsStory.h"
+#import "JLTNewsController.h"
 
 
 
@@ -29,6 +30,10 @@
 {
     self = [super initWithStyle:UITableViewStyleGrouped];
     if (self) {
+        
+        
+        [[JLTNewsController sharedController] getLatestNewsStories];
+        
         self.title = @"Joel's News";
         [self.tableView registerClass:[JLTNewsStoryTableViewCell class] forCellReuseIdentifier:@"NewsStoryCellIdentifier"];
         
