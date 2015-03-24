@@ -10,4 +10,6 @@
 
 @interface JLTNewsController : NSObject
 
++ (JLTNewsController *)sharedController;
+
 @end

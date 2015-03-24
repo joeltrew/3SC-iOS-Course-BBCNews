@@ -8,6 +8,19 @@
 
 #import "JLTNewsController.h"
 
+static JLTNewsController *sharedController = nil;
+
 @implementation JLTNewsController
+
++ (JLTNewsController *)sharedController
+{
+    @synchronized(self) {
+        if (sharedController == nil ){
+            sharedController = [self new];
+        }
+    }
+    
+    return sharedController;
+}
 
 @end
