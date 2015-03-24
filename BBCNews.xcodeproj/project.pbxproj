@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		FF0C04651AC1E6D500AF63F9 /* JLTNewsController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF0C04641AC1E6D500AF63F9 /* JLTNewsController.m */; };
+		FF0C04701AC1E98300AF63F9 /* ThunderRequest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF0C046D1AC1E91500AF63F9 /* ThunderRequest.framework */; };
+		FF0C04711AC1E98300AF63F9 /* ThunderRequest.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FF0C046D1AC1E91500AF63F9 /* ThunderRequest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FF6F73B41AA634CA000C2DF1 /* JLTTopNewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF6F73B31AA634CA000C2DF1 /* JLTTopNewsTableViewController.m */; };
 		FF6F73B71AA63E66000C2DF1 /* JLTNewsStoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF6F73B61AA63E66000C2DF1 /* JLTNewsStoryTableViewCell.m */; };
 		FFB2A8571A9CFC6A009F283C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB2A8561A9CFC6A009F283C /* main.m */; };
@@ -22,6 +24,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		FF0C046C1AC1E91500AF63F9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF0C04671AC1E91500AF63F9 /* ThunderRequest.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C2E5088219C835A300350F00;
+			remoteInfo = ThunderRequest;
+		};
+		FF0C046E1AC1E91500AF63F9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF0C04671AC1E91500AF63F9 /* ThunderRequest.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C2E5088D19C835A300350F00;
+			remoteInfo = ThunderRequestTests;
+		};
+		FF0C04721AC1E98300AF63F9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF0C04671AC1E91500AF63F9 /* ThunderRequest.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C2E5088119C835A300350F00;
+			remoteInfo = ThunderRequest;
+		};
 		FFB2A86B1A9CFC6A009F283C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FFB2A8491A9CFC6A009F283C /* Project object */;
@@ -31,9 +54,24 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		FF0C04741AC1E98300AF63F9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FF0C04711AC1E98300AF63F9 /* ThunderRequest.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		FF0C04631AC1E6D500AF63F9 /* JLTNewsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLTNewsController.h; sourceTree = "<group>"; };
 		FF0C04641AC1E6D500AF63F9 /* JLTNewsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLTNewsController.m; sourceTree = "<group>"; };
+		FF0C04671AC1E91500AF63F9 /* ThunderRequest.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ThunderRequest.xcodeproj; path = "iOS-ThunderRequest/ThunderRequest.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		FF6F73B21AA634CA000C2DF1 /* JLTTopNewsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLTTopNewsTableViewController.h; sourceTree = "<group>"; };
 		FF6F73B31AA634CA000C2DF1 /* JLTTopNewsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLTTopNewsTableViewController.m; sourceTree = "<group>"; };
 		FF6F73B51AA63E66000C2DF1 /* JLTNewsStoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLTNewsStoryTableViewCell.h; sourceTree = "<group>"; };
@@ -63,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF0C04701AC1E98300AF63F9 /* ThunderRequest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +122,15 @@
 				FF0C04641AC1E6D500AF63F9 /* JLTNewsController.m */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		FF0C04681AC1E91500AF63F9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FF0C046D1AC1E91500AF63F9 /* ThunderRequest.framework */,
+				FF0C046F1AC1E91500AF63F9 /* ThunderRequestTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		FF6F73B81AA64D0B000C2DF1 /* Demo files */ = {
@@ -132,6 +180,7 @@
 		FFB2A8541A9CFC6A009F283C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FF0C04671AC1E91500AF63F9 /* ThunderRequest.xcodeproj */,
 				FFB2A8551A9CFC6A009F283C /* Info.plist */,
 				FFB2A8561A9CFC6A009F283C /* main.m */,
 			);
@@ -196,10 +245,12 @@
 				FFB2A84D1A9CFC6A009F283C /* Sources */,
 				FFB2A84E1A9CFC6A009F283C /* Frameworks */,
 				FFB2A84F1A9CFC6A009F283C /* Resources */,
+				FF0C04741AC1E98300AF63F9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				FF0C04731AC1E98300AF63F9 /* PBXTargetDependency */,
 			);
 			name = BBCNews;
 			productName = BBCNews;
@@ -254,6 +305,12 @@
 			mainGroup = FFB2A8481A9CFC6A009F283C;
 			productRefGroup = FFB2A8521A9CFC6A009F283C /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = FF0C04681AC1E91500AF63F9 /* Products */;
+					ProjectRef = FF0C04671AC1E91500AF63F9 /* ThunderRequest.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				FFB2A8501A9CFC6A009F283C /* BBCNews */,
@@ -261,6 +318,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		FF0C046D1AC1E91500AF63F9 /* ThunderRequest.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ThunderRequest.framework;
+			remoteRef = FF0C046C1AC1E91500AF63F9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FF0C046F1AC1E91500AF63F9 /* ThunderRequestTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ThunderRequestTests.xctest;
+			remoteRef = FF0C046E1AC1E91500AF63F9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		FFB2A84F1A9CFC6A009F283C /* Resources */ = {
@@ -309,6 +383,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		FF0C04731AC1E98300AF63F9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ThunderRequest;
+			targetProxy = FF0C04721AC1E98300AF63F9 /* PBXContainerItemProxy */;
+		};
 		FFB2A86C1A9CFC6A009F283C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FFB2A8501A9CFC6A009F283C /* BBCNews */;
