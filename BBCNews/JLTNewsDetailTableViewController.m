@@ -71,9 +71,16 @@
         imageCell.imageView.image = self.story.storyImage;
         
         return imageCell;
+    } else if(indexPath.row == 1) {
+        
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellID" forIndexPath:indexPath];
+        cell.textLabel.text = self.story.storyBody;
+        
+        return cell;
+        
     }
     
-       UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellID" forIndexPath:indexPath];
+UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellID" forIndexPath:indexPath];
     
     return cell;
 }
