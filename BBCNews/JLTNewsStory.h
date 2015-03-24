@@ -11,8 +11,11 @@
 
 @interface JLTNewsStory : NSObject
 
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+
 @property (nonatomic, strong) NSString *storyHeadline;
 @property (nonatomic, strong) NSString *storyBody;
 @property (nonatomic, strong) UIImage *storyImage;
+@property (nonatomic, strong) NSURL *storyImageURL;
 
 @end

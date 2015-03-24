@@ -10,6 +10,18 @@
 
 @implementation JLTNewsStory
 
-
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary
+{
+    self = [super init];
+    if (self) {
+        self.storyHeadline = dictionary[@"headline"];
+        self.storyBody = dictionary[@"body"];
+        self.storyImageURL = [NSURL URLWithString:dictionary[@"imageURL"]];
+        
+    
+    
+    }
+    return self;
+}
 
 @end
