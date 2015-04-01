@@ -7,6 +7,7 @@
 //
 
 #import "JLTNewsController.h"
+#import "JLTNewsStory.h"
 @import ThunderRequest;
 
 static JLTNewsController *sharedController = nil;
@@ -42,15 +43,24 @@ static JLTNewsController *sharedController = nil;
 }
 
 
-- (void)getLatestNewsStories
+- (void)getLatestNewsStoriesWithCompletion:(JLTNewsStoriesCompletion) completion
 {
     [self.requestController get:@"topStories.php" completion:^(TSCRequestResponse *response, NSError *error) {
         if (error) {
             NSLog(@"Something went wrong!!");
+            completion(error, nil);
             return;
         }
         
-        NSLog(@"response:%@", response.array);
+        NSMutableArray *stories = [NSMutableArray array];
+        
+        for (NSDictionary *dictionary in response.array){
+            JLTNewsStory *newsStory = [[JLTNewsStory alloc]initWithDictionary:dictionary];
+            
+            [stories addObject:newsStory];
+        }
+        
+        completion(nil, stories);
     }];
 }
 

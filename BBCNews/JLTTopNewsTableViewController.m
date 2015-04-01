@@ -32,29 +32,28 @@
     if (self) {
         
         
-        [[JLTNewsController sharedController] getLatestNewsStories];
-        
         self.title = @"Joel's News";
         [self.tableView registerClass:[JLTNewsStoryTableViewCell class] forCellReuseIdentifier:@"NewsStoryCellIdentifier"];
         
-        JLTNewsStory *storyFirstStory = [[JLTNewsStory alloc] init];
-        storyFirstStory.storyHeadline = @"Apple Watch prices and apps revealed";
-        storyFirstStory.storyBody = @"Apple's smartwatch collection will range in price from $349 to $17,000 (£299 to £13,500 in the UK) depending on the metals they are made from and the straps they are bought with.";
-        storyFirstStory.storyImage = [UIImage imageNamed:@"NewsStoryImage"];
-        
-        JLTNewsStory *storySecondStory = [[JLTNewsStory alloc] init];
-        storySecondStory.storyHeadline = @"Banning Tor unwise and infeasible, MPs told";
-        storySecondStory.storyBody = @"A ban on online anonymity networks would be 'technologically infeasible' and unwise, MPs have been told.";
-        storySecondStory.storyImage = [UIImage imageNamed:@"NewsStoryImage2"];
-        
-        self.stories = @[storyFirstStory, storySecondStory];
     }
     return self;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [[JLTNewsController sharedController] getLatestNewsStoriesWithCompletion:^(NSError *error, NSArray *stories) {
 
+    
+    if (error) {
+        NSLog(@"Sorry, couldnt load news stories");
+        return;
+    }
+    
+    self.stories = stories;
+    [self.tableView reloadData];
+
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -94,7 +93,7 @@
     JLTNewsStory *newsStory = self.stories[indexPath.row];
     cell.textLabel.text = newsStory.storyHeadline;
     cell.detailTextLabel.text = newsStory.storyBody;
-    cell.imageView.image = newsStory.storyImage;
+    cell.imageView.image = [UIImage  imageWithData:[NSData dataWithContentsOfURL:newsStory.storyImageURL]];
     
     
     cell.textLabel.numberOfLines = 3;

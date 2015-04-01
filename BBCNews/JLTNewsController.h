@@ -10,7 +10,9 @@
 
 @interface JLTNewsController : NSObject
 
+typedef void (^JLTNewsStoriesCompletion)(NSError *error, NSArray *stories);
+
 + (JLTNewsController *)sharedController;
-- (void)getLatestNewsStories;
+- (void)getLatestNewsStoriesWithCompletion:(JLTNewsStoriesCompletion) completion;
 
 @end

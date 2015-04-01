@@ -68,7 +68,7 @@
     if (indexPath.row == 0) {
         JLTNewsStoryImageCell *imageCell = [tableView dequeueReusableCellWithIdentifier:@"ImageCellID" forIndexPath:indexPath];
         
-        imageCell.imageView.image = self.story.storyImage;
+        imageCell.imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:self.story.storyImageURL]];
         
         return imageCell;
     } else if(indexPath.row == 1) {
