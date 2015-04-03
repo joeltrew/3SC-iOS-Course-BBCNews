@@ -31,9 +31,29 @@
     
     [self.window makeKeyAndVisible];
     
+    [self customiseAppearance];
+    
     
     return YES;
 }
+
+- (void)customiseAppearance
+{
+        UIWindow *window = self.window;
+        window.tintColor = [UIColor colorWithRed:0.745 green:0.000 blue:0.020 alpha:1.000];
+        window.backgroundColor = [UIColor whiteColor];
+    
+        UINavigationBar *navigationBar = [UINavigationBar appearance];
+        navigationBar.barTintColor = [UIColor colorWithRed:0.745 green:0.000 blue:0.020 alpha:1.000];
+        navigationBar.tintColor = [UIColor whiteColor];
+        [navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
+        [navigationBar setTranslucent:NO];
+    
+    UITabBar *tabBar = [UITabBar appearance];
+        tabBar.tintColor = [UIColor colorWithRed:0.745 green:0.000 blue:0.020 alpha:1.000];
+    
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
